@@ -1,0 +1,19 @@
+<section>
+    <div class="example-button-row">
+        <button (click)='doGET()' mat-raised-button color="primary" color="accent">GET</button>
+        <button (click)='doPOST()' mat-raised-button color="primary" color="accent">POST</button>
+        <button (click)='doPUT()' mat-raised-button color="primary" color="accent">PUT</button>
+        <button (click)='doDELETE()' mat-raised-button color="primary" color="accent">DELETE</button>
+    </div>
+
+    <div class="example-button-row">
+        <button (click)='doGETAsPromise()' mat-raised-button color="primary" color="accent">As promise</button>
+        <button (click)='doGETAsPromiseError()' mat-raised-button color="primary" color="accent">Error as promise</button>
+        <button (click)='doGETAsObservableError()' mat-raised-button color="primary" color="accent">Error as observable</button>
+    </div>
+
+    <div class="example-button-row">
+        <button (click)='doGETWithHeaders()' mat-raised-button color="primary" color="warn">With Headers</button>
+    </div>
+    
+</section>
