@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from "@angular/forms"
 import { debounceTime, distinctUntilChanged } from "rxjs/operators"
 import { SearchService } from "./search-service/search.service"
+import { Song } from ".//song-interface/song"
 
 
 @Component({
@@ -13,15 +14,16 @@ export class HttpPromiseApiComponent implements OnInit {
 
   public inputSearch: FormControl;
   public loading: boolean = false;
+  public songs: Song[];
   
   constructor(
-    private searchService: SearchService
+    public searchService: SearchService
     ) { }
 
   ngOnInit(): void {
     this.inputSearch = new FormControl([]),
     this.inputSearch.valueChanges.pipe(debounceTime(500), distinctUntilChanged()).subscribe(val => {
-      this.searchService.search(val);
+      this.searchService.search(val)
     })
   }
 

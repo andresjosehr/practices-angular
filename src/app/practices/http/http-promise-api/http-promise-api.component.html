@@ -7,12 +7,15 @@
               </mat-form-field>
         </mat-grid-tile>
     </mat-grid-list>
-    <mat-grid-list cols="5" rowHeight="2:1">
-        <mat-grid-tile>1</mat-grid-tile>
-        <mat-grid-tile>2</mat-grid-tile>
-        <mat-grid-tile>3</mat-grid-tile>
-        <mat-grid-tile>4</mat-grid-tile>
-        <mat-grid-tile>5</mat-grid-tile>
-        <mat-grid-tile>6</mat-grid-tile>
+    <mat-grid-list cols="5" rowHeight="4:1">
+        <mat-grid-tile *ngFor='let song of this.searchService.songs'>
+            <mat-card class="example-card" style='height: 55% !important; width: 87.8% !important;'>
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image" style="background-image: url('{{song.artworkUrl100}}');background-size: cover;"></div>
+                  <mat-card-title>{{song.artistName}}</mat-card-title>
+                  <mat-card-subtitle>{{song.trackName}}</mat-card-subtitle>
+                </mat-card-header>
+              </mat-card>
+        </mat-grid-tile>
     </mat-grid-list>
 </section>

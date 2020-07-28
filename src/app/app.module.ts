@@ -11,6 +11,8 @@ import { HttpPromiseApiComponent } from './practices/http/http-promise-api/http-
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms'
+import {MatCardModule} from '@angular/material/card';
+
 
 
 
@@ -28,7 +30,8 @@ import { ReactiveFormsModule } from '@angular/forms'
     MatButtonModule,
     MatGridListModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCardModule
     
   ],
   providers: [],
