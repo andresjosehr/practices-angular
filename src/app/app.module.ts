@@ -5,13 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpApiComponent } from './practices/http/http-api/http-api.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http'
 import { MatButtonModule } from '@angular/material/button';
 import { HttpPromiseApiComponent } from './practices/http/http-promise-api/http-promise-api.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms'
 import {MatCardModule} from '@angular/material/card';
+import { HttpObservableApiComponent } from './practices/http/http-observable-api/http-observable-api.component';
+import { HttpJsonpApiComponent } from './practices/http/http-jsonp-api/http-jsonp-api.component';
 
 
 
@@ -20,7 +22,9 @@ import {MatCardModule} from '@angular/material/card';
   declarations: [
     AppComponent,
     HttpApiComponent,
-    HttpPromiseApiComponent
+    HttpPromiseApiComponent,
+    HttpObservableApiComponent,
+    HttpJsonpApiComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,8 @@ import {MatCardModule} from '@angular/material/card';
     MatGridListModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientJsonpModule
     
   ],
   providers: [],

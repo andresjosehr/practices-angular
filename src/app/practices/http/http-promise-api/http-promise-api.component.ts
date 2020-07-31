@@ -13,8 +13,6 @@ import { Song } from ".//song-interface/song"
 export class HttpPromiseApiComponent implements OnInit {
 
   public inputSearch: FormControl;
-  public loading: boolean = false;
-  public songs: Song[];
   
   constructor(
     public searchService: SearchService
