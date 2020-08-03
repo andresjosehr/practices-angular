@@ -1,0 +1,24 @@
+<h2>{{title}}</h2>
+<div class="mb-3">
+  <ng-container *ngTemplateOutlet="counterValueTpl || defaultValueTpl; context:counterValueTplContext"></ng-container>
+</div>
+<div class="d-flex">
+  <div class="mr-3">
+    <ng-container *ngTemplateOutlet="counterIncBtnTpl || defaultIncBtnTpl; context:counterIncBtnTplContext"></ng-container>
+  </div>
+   <div>
+     <ng-container *ngTemplateOutlet="counterDecBtnTpl || defaultDecBtnTpl; context:counterDecBtnTplContext"></ng-container>
+  </div>
+</div>
+
+<ng-template #defaultValueTpl>
+  {{value}}
+</ng-template>
+
+<ng-template #defaultIncBtnTpl>
+  <button (click)="increment()">inc</button>
+</ng-template>
+
+<ng-template #defaultDecBtnTpl>
+  <button (click)="decrement()">dec</button>
+</ng-template>

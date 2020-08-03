@@ -14,6 +14,10 @@ import { ReactiveFormsModule } from '@angular/forms'
 import {MatCardModule} from '@angular/material/card';
 import { HttpObservableApiComponent } from './practices/http/http-observable-api/http-observable-api.component';
 import { HttpJsonpApiComponent } from './practices/http/http-jsonp-api/http-jsonp-api.component';
+import { ObservablesComponent } from './practices/observables/observables.component';
+import { CounterComponent } from './practices/reusable-components/counter/counter.component';
+import { CustomCounterComponent } from './practices/reusable-components/custom-counter/custom-counter.component';
+import { CounterLayoutComponent } from './practices/reusable-components/counter-layout/counter-layout.component';
 
 
 
@@ -24,7 +28,11 @@ import { HttpJsonpApiComponent } from './practices/http/http-jsonp-api/http-json
     HttpApiComponent,
     HttpPromiseApiComponent,
     HttpObservableApiComponent,
-    HttpJsonpApiComponent
+    HttpJsonpApiComponent,
+    ObservablesComponent,
+    CounterComponent,
+    CustomCounterComponent,
+    CounterLayoutComponent,
   ],
   imports: [
     BrowserModule,

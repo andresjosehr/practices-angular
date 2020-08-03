@@ -1,0 +1,20 @@
+<app-custom-counter title="Fancy counter">
+    <ng-template appCounterValue let-value>
+      <div>
+        <span class="mr-2">Current value: {{value}}</span> 
+        <i class="fa fa-arrow-left"></i>
+      </div>
+    </ng-template>
+  
+    <ng-template appCounterBtnIncrement let-increment>
+      <button class="btn btn-success" (click)="increment()">
+        inc <i class="fa fa-arrow-up"></i>
+      </button>
+    </ng-template>
+  
+    <ng-template appCounterBtnDecrement let-decrement>
+      <button class="btn btn-danger" (click)="decrement()">
+        dec <i class="fa fa-arrow-down"></i>
+      </button>
+    </ng-template>
+  </app-custom-counter>
